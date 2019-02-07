@@ -25,6 +25,7 @@ h1 {
 .menu {
   background-color: gray;
   display: flex;
+  padding: 0.2em 0;
 }
 
 .menu-controls {
@@ -34,6 +35,7 @@ h1 {
 .page-content {
   background-color: var(--frontend-color);
   display: flex;
+  padding: 0.8em;
 }
 
 .client-computer {
@@ -78,7 +80,13 @@ h1 {
   width: 8px;
 }
 
-.base {
+.screen-content {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.screen-base {
   background: #e8ebf0;
   bottom: -70px;
   height: 50px;
@@ -87,41 +95,41 @@ h1 {
   width: 90px;
 }
 
-.base:before,
-.base:after,
-.grey-shadow:before,
-.grey-shadow:after{
+.screen-base:before,
+.screen-base:after,
+.screen-base-grey-shadow:before,
+.screen-base-grey-shadow:after{
   content: "";
   position: absolute;
   top: 0;
 }
 
-.base:before {
+.screen-base:before {
   border-bottom: 50px solid #e8ebf0;
   border-left: 13px solid transparent;
   border-right: 0px solid transparent;
   left: -13px;
 }
 
-.base:after {
+.screen-base:after {
   border-bottom: 50px solid #e8ebf0;
   border-left: 0px solid transparent;
   border-right: 13px solid transparent;
   right: -13px;
 }
 
-.base > div {
+.screen-base > div {
   position: absolute;
 }
 
-.grey-shadow {
+.screen-base-grey-shadow {
   background: #d8dbe1;
   height: 12px;
   top: 0;
   width: 90px;
 }
 
-.grey-shadow:before {
+.screen-base-grey-shadow:before {
   border-bottom: 12px solid #d8dbe1;
   border-left: 3px solid transparent;
   border-right: 0px solid transparent;
@@ -129,7 +137,7 @@ h1 {
   z-index: 2
 }
 
-.grey-shadow:after {
+.screen-base-grey-shadow:after {
   border-bottom: 12px solid #d8dbe1;
   border-left: 0px solid transparent;
   border-right: 3px solid transparent;
@@ -137,12 +145,12 @@ h1 {
   z-index: 2
 }
 
-.foot {
+.screen-base-foot {
   background: #e8ebf0;
   z-index: 1;
 }
 
-.foot.top {
+.foot-top {
   bottom: -5px;
   height: 5px;
   left: 50%;
@@ -150,29 +158,29 @@ h1 {
   width: 116px;
 }
 
-.foot.top:before,
-.foot.top:after,
-.foot.bottom:before {
+.foot-top:before,
+.foot-top:after,
+.foot-bottom:before {
   content: "";
   position: absolute;
   top: 0px;
 }
 
-.foot.top:before {
+.foot-top:before {
   border-bottom: 5px solid #e8ebf0;
   border-left: 16px solid transparent;
   border-right: 0px solid transparent;
   left: -16px;
 }
 
-.foot.top:after {
+.foot-top:after {
   border-bottom: 5px solid #e8ebf0;
   border-left: 0px solid transparent;
   border-right: 16px solid transparent;
   right: -16px;
 }
 
-.foot.bottom {
+.foot-bottom {
   bottom: -10px;
   height: 5px;
   left: 50%;
@@ -181,7 +189,7 @@ h1 {
   z-index: 999;
 }
 
-.shadow {
+.screen-base-shadow {
   background: radial-gradient(ellipse at center, rgba(52,172,108,1) 0%,rgba(52,172,108,1) 53%,rgba(46,204,113,1) 55%,rgba(46,204,113,0) 55%,rgba(46,204,113,0) 100%);
   bottom: -20px;
   height: 15px;
