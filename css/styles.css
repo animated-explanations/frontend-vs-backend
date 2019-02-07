@@ -1,8 +1,15 @@
 :root {
   --body-background: #f4f4f4;
-  --frontend-color: #2ecc71;
   --primary-color: #1845c9;
   --text-color: #333333;
+
+  --frontend-color: rgba(46, 204, 113, 0.7);
+  --backend-color: rgba(252, 146, 82, 0.7);
+
+  --frontend-width: 70%;
+  --backend-width: 30%;
+
+  --padding-1: 0.8em;
 }
 
 * {
@@ -33,14 +40,35 @@ h1 {
 }
 
 .page-content {
-  background-color: var(--frontend-color);
   display: flex;
-  padding: 0.8em;
+  padding: var(--padding-1);
+  position: relative;
 }
 
-.client-computer {
+.page-background {
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.page-background-frontend {
+  background-color: var(--frontend-color);
+  height: 100%;
+  width: var(--frontend-width);
+}
+
+.page-background-backend {
+  background-color: var(--backend-color);
+  height: 100%;
+  width: var(--backend-width);
+}
+
+.page-content-frontend {
   height: 530px;
-  width: 800px;
+  width: calc(var(--frontend-width) - 50px);
 }
 
 .screen {
