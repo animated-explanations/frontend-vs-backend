@@ -4,12 +4,16 @@
   --text-color: #333333;
 
   --frontend-color: rgba(46, 204, 113, 0.7);
+  --frontend-text-color: rgb(15, 136, 66);
+
   --backend-color: rgba(252, 146, 82, 0.7);
+  --backend-text-color: rgb(216, 100, 31);
 
   --frontend-width: 70%;
   --backend-width: 30%;
 
   --padding-1: 0.8em;
+  --pading-half-between: 5em;
 }
 
 * {
@@ -41,34 +45,27 @@ h1 {
 
 .page-content {
   display: flex;
-  padding: var(--padding-1);
-  position: relative;
-}
-
-.page-background {
-  bottom: 0;
-  display: flex;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.page-background-frontend {
-  background-color: var(--frontend-color);
-  height: 100%;
-  width: var(--frontend-width);
-}
-
-.page-background-backend {
-  background-color: var(--backend-color);
-  height: 100%;
-  width: var(--backend-width);
 }
 
 .page-content-frontend {
+  background-color: var(--frontend-color);
+  color: var(--frontend-text-color);
   height: 530px;
-  width: calc(var(--frontend-width) - 50px);
+  padding: 0.1em calc(var(--pading-half-between)*2) var(--padding-1) var(--padding-1);
+  width: var(--frontend-width);
+}
+
+.page-content-backend {
+  background-color: var(--backend-color);
+  color: var(--backend-text-color);
+  padding: 0.1em var(--padding-1) var(--padding-1) var(--pading-half-between);
+  width: var(--backend-width);
+}
+
+.page-content-label {
+  font-size: 2em;
+  padding-top: 0.1em;
+  text-align: center;
 }
 
 .screen {
