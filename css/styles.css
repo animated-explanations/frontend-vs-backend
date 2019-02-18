@@ -9,11 +9,11 @@
   --backend-color: rgba(252, 146, 82, 0.7);
   --backend-text-color: rgb(216, 100, 31);
 
-  --frontend-width: 70%;
-  --backend-width: 30%;
+  --frontend-width: 65%;
+  --backend-width: 45%;
 
   --padding-1: 0.8em;
-  --pading-half-between: 5em;
+  --pading-half-between: 6em;
 }
 
 * {
@@ -58,7 +58,7 @@ h1 {
 .page-content-backend {
   background-color: var(--backend-color);
   color: var(--backend-text-color);
-  padding: 0.1em var(--padding-1) var(--padding-1) var(--pading-half-between);
+  padding: 0.1em var(--padding-1) var(--padding-1) calc(var(--pading-half-between)*2);
   width: var(--backend-width);
 }
 
@@ -71,7 +71,7 @@ h1 {
 .screen {
   border: 20px solid #474e5d;
   border-radius: 10px;
-  height: calc(100% - 70px);
+  height: calc(100% - 115px);
   position: relative;
   width: 100%;
 }
@@ -222,4 +222,45 @@ h1 {
   margin-left: -175px;
   position: absolute;
   width: 350px;
+}
+
+.wrapper-backend {
+  height: 100%;
+  padding-top: 40%;
+}
+
+.server {
+  align-items: center;
+  background-color: #696c72;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  height: 4em;
+  padding: var(--padding-1) calc(var(--padding-1)*1.5);
+  width: 100%;
+}
+
+.server-buttons {
+  display: flex;
+}
+
+.server-button {
+  background-color: #12d312;
+  border: 2px solid #379237;
+  border-radius: 50%;
+  height: 1em;
+  margin-left: 0.3em;
+  width: 1em;
+}
+
+.server-button-orange {
+  background-color: #fbd638;
+  border: 2px solid #bfa123;
+}
+
+.server-vent {
+  background: linear-gradient(90deg, rgba(201, 201, 201, 0.6) 2px, transparent 1%) center;
+  background-size: 5px;
+  height: 100%;
+  width: 38%;
 }
