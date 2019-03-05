@@ -40,6 +40,10 @@ h1 {
   justify-content: space-around;
 }
 
+.icon-lg {
+  font-size: 5em;
+}
+
 .menu {
   background-color: gray;
   display: flex;
@@ -52,6 +56,7 @@ h1 {
 
 .page-content {
   display: flex;
+  position: relative;
 }
 
 .page-content-frontend {
@@ -154,7 +159,7 @@ h1 {
 .screen-base:before,
 .screen-base:after,
 .screen-base-grey-shadow:before,
-.screen-base-grey-shadow:after{
+.screen-base-grey-shadow:after {
   content: "";
   position: absolute;
   top: 0;
@@ -258,6 +263,7 @@ h1 {
 .wrapper-backend {
   height: 100%;
   padding-top: 40%;
+  position: relative;
 }
 
 .server {
@@ -268,7 +274,9 @@ h1 {
   justify-content: space-between;
   height: 4em;
   padding: var(--padding-1) calc(var(--padding-1)*1.5);
+  position: absolute;
   width: 100%;
+  z-index: 100;
 }
 
 .server-buttons {
@@ -295,3 +303,14 @@ h1 {
   height: 100%;
   width: 38%;
 }
+
+.network-file {
+  background-color: rgba(67, 222, 255, 0.9);
+  border-radius: 7px 50% 7px 7px;
+  color: #5367ff;
+  left: 70%;
+  position: absolute;
+  top: 30%;
+  z-index: 0;
+}
+
